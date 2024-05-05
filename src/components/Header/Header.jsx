@@ -1,19 +1,27 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   const links = (
     <>
       <li>
-        <NavLink to="/">Home</NavLink>
+        <NavLink className="mx-4 hover:text-[#7E90FE]" to="/">
+          Home
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/statistics">Statistics</NavLink>
+        <NavLink className="mx-4 hover:text-[#7E90FE]" to="/statistics">
+          Statistics
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/appliedJobs">Applied Jobs</NavLink>
+        <NavLink className="mx-4 hover:text-[#7E90FE]" to="/appliedJobs">
+          Applied Jobs
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/blogs">Blogs</NavLink>
+        <NavLink className="mx-4 hover:text-[#7E90FE]" to="/blogs">
+          Blogs
+        </NavLink>
       </li>
     </>
   );
@@ -45,13 +53,18 @@ const Header = () => {
               {links}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          <Link to="/" className="text-xl font-bold hover:cursor-pointer">
+            Career Hub
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">{links}</ul>
+          <ul className="menu-horizontal px-1">{links}</ul>
         </div>
         <div className="navbar-end">
-          <NavLink to="" className="btn">
+          <NavLink
+            to=""
+            className="btn bg-gradient-to-r from-[#7E90FE] to-[#9873FF] text-white"
+          >
             Start Apllying
           </NavLink>
         </div>
